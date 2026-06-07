@@ -1,18 +1,21 @@
 {
   "name": "mlbb-account-ban-checker",
-  "version": "1.0.0",
-  "description": "Tools untuk mengecek status akun MLBB terbanned atau tidak",
+  "version": "2.0.0",
+  "description": "Tools untuk mengecek status akun MLBB terbanned atau tidak - Web & Telegram Bot",
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js",
+    "bot": "node bot.js",
     "dev": "nodemon server/app.js",
+    "dev:bot": "nodemon bot.js",
     "test": "jest"
   },
   "keywords": [
     "mlbb",
     "mobile legends",
     "ban checker",
-    "account status"
+    "account status",
+    "telegram bot"
   ],
   "author": "moontondonotreplyyf-ship-it",
   "license": "MIT",
@@ -21,7 +24,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "axios": "^1.4.0",
-    "express-rate-limit": "^6.7.0"
+    "express-rate-limit": "^6.7.0",
+    "node-telegram-bot-api": "^0.61.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
