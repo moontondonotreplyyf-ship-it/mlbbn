@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Account Ban Checker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🎮 MLBB Account Ban Checker</h1>
+                <p>Cek status akun Mobile Legends Anda</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Tabs Navigation -->
+            <nav class="tabs-nav">
+                <button class="tab-btn active" data-tab="check">Cek Ban</button>
+                <button class="tab-btn" data-tab="history">History</button>
+                <button class="tab-btn" data-tab="report">Report</button>
+            </nav>
+
+            <!-- Tab 1: Check Ban -->
+            <div id="check" class="tab-content active">
+                <div class="card">
+                    <h2>Cek Status Ban Akun</h2>
+                    <form id="checkBanForm">
+                        <div class="form-group">
+                            <label for="userIdInput">User ID atau Username:</label>
+                            <input 
+                                type="text" 
+                                id="userIdInput" 
+                                placeholder="Masukkan User ID atau Username"
+                                required
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cek Status</button>
+                    </form>
+
+                    <!-- Result Container -->
+                    <div id="checkResult" class="result-container"></div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Ban History -->
+            <div id="history" class="tab-content">
+                <div class="card">
+                    <h2>Riwayat Ban</h2>
+                    <form id="historyForm">
+                        <div class="form-group">
+                            <label for="userIdHistory">User ID:</label>
+                            <input 
+                                type="text" 
+                                id="userIdHistory" 
+                                placeholder="Masukkan User ID"
+                                required
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-primary">Lihat History</button>
+                    </form>
+
+                    <!-- History Result Container -->
+                    <div id="historyResult" class="result-container"></div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Report Ban -->
+            <div id="report" class="tab-content">
+                <div class="card">
+                    <h2>Lapor Ban Curiga</h2>
+                    <form id="reportForm">
+                        <div class="form-group">
+                            <label for="reportUserId">User ID:</label>
+                            <input 
+                                type="text" 
+                                id="reportUserId" 
+                                placeholder="Masukkan User ID"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="reportReason">Alasan Ban:</label>
+                            <select id="reportReason" required>
+                                <option value="">-- Pilih Alasan --</option>
+                                <option value="toxic">Toxic Behavior</option>
+                                <option value="afk">AFK Frequent</option>
+                                <option value="feeding">Feeding</option>
+                                <option value="cheating">Cheating/Hacking</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reportEvidence">Bukti (opsional):</label>
+                            <textarea 
+                                id="reportEvidence" 
+                                placeholder="Jelaskan bukti atau deskripsi lengkap"
+                                rows="4"
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Laporan</button>
+                    </form>
+
+                    <!-- Report Result Container -->
+                    <div id="reportResult" class="result-container"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 MLBB Ban Checker | Made with ❤️ for MLBB Players</p>
+        </footer>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
